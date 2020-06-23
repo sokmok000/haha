@@ -185,16 +185,16 @@ router.post('/signup',function(req,res){
 // }
 if(req.file){
   User.findById({_id:req.user._id},function(err,find){
-    if(err){
-      console.log(err)
-    }else{
-      const imageall = "./public/uploadsuser/" + find.image
-      fs.unlink(imageall,function(err){
-        if(err){
-          console.log(err)
-        }
-      })
-    }
+    // if(err){
+    //   console.log(err)
+    // }else{
+    //   const imageall = "./public/uploadsuser/" + find.image
+    //   fs.unlink(imageall,function(err){
+    //     if(err){
+    //       console.log(err)
+    //     }
+    //   })
+    // }
     })
     var Name = req.body.Name;
     var Surename = req.body.Surename;
