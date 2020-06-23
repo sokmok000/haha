@@ -128,7 +128,7 @@ function(req , res){
 
 
 router.post('/signup',function(req,res){
-  User.register(new User({username:req.body.username,email:req.body.email,Name :"",Surename :"",Housenumber:"", Province:"", District:"", Postalcode:"", IDCard :"", Telephone:"", Size :"",Gender:"", image:"", Road:"", Parish:""
+  User.register(new User({username:req.body.username,email:req.body.email,Name :"",Surename :"",Housenumber:"", Province:"", District:"", Postalcode:"", IDCard :"", Telephone:"", Size :"",Gender:"", image:"451-4517876_default-profile-hd-png-download.png", Road:"", Parish:""
     }), req.body.password, function(err, user){
       if(err){
           console.log(err);
