@@ -3,8 +3,13 @@ const mongoose = require("mongoose");
 passportLocalMongoose = require('passport-local-mongoose');
 let bcrypt = require('bcryptjs')
  // connection
+ const config = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+}
 const connectiondb = "mongodb+srv://sokmok000:sokmok0000@cluster0-izngf.mongodb.net/test?retryWrites=true&w=majority"
-mongoose.connect(connectiondb,{useNewUrlParser: true , useUnifiedTopology: true})
+mongoose.connect(connectiondb,config)
 
 let dbtell = mongoose.connection;
 dbtell.on("error",console.error.bind(console,"connection error"))
