@@ -89,139 +89,7 @@
     color: #a7a7a7;
 
   }
-  /*รายการสินค้า*/
- 
-
-/*ดีเทลรองเท้า2*/
-/*:root
-{
- --primary:#f84848;
-}
-.b2
-{
-  background-color: #efefef;
-}
-
-
-#con
-{
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-}
-
-.card2
-{
-  display: flex;
-  justify-content: center;
-  align-items:center ;
-  width: 860px;
-}
-
-.shoeBackground
-{
-  width: 50%;
-  height: 475px;
-  box-shadow: -15px 0 35px rgba(0, 0, 0, 0.1),
-  0 -15px 35p rgba(0, 0, 0, 0.1),
-  0 15px 35px rgba(0, 0, 0, 0.1);
-}
-
-.gradients
-{
-  position:absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-}
-
-.gradient
-{
-  position:absolute;
-  width: 0%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index:-2 ;
-}
-
-.gradient[color="blue"]{
-    background-image: linear-gradient(45deg, #0136af, #22abfa);
-}
-
-.gradient[color="red"]{
-    background-image: linear-gradient(45deg, #d62926, #ee625f);
-}
-
-.gradient[color="green"]{
-    background-image: linear-gradient(45deg, #11998e, #1ce669);
-}
-
-.gradient[color="orange"]{
-    background-image: linear-gradient(45deg, #fc4a1a, #f7b733);
-}
-
-.gradient[color="black"]{
-    background-image: linear-gradient(45deg, #111, #666);
-}
-
-.gradient[color="orange"]{
-  position: absolute;
-  width: 100px;
-  left: 20px;
-  top: 20px;
-}
-
-.share
-{
-  position: absolute;
-  top: 15p;
-  right: 15px;
-  background-color: #fff;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 1.3rem;
-  text-decoration: none;
-  color: var(--primary);
-  transition: .5s;
-}
-
-.share:hover
-{
-  transform: scale(1.1);
-}
-
-.share i
-{
-line-height:50px ;
-}
-
-.nike
-{
-  position: absolute;
-  top: 85px;
-  left: 15px;
-  font-size: 11rem;
-  text-transform: uppercase;
-  line-height: .9;
-  color: #fff;
-  opacity: .1;
-
-}
-
-.info
-{
-  width: 50%;
-
-}*/
-
-
-/*ดีเทลรองเท้า2*/
+  
  
 
 
@@ -247,7 +115,7 @@ function myFunction() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>NameWeb</title>
+        <title>Admin Sneaker</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -264,7 +132,8 @@ function myFunction() {
       
       <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     
-      <a href="/admin" class="w3-bar-item w3-button w3-padding-large"><i class="glyphicon glyphicon-home"></i> Admin </a>
+      <a href="/" class="w3-bar-item w3-button w3-padding-large"><i class="glyphicon glyphicon-home"></i> Home </a>
+      <a href="/admin" class="w3-bar-item w3-button w3-padding-large w3-hide-small"></i> Admin </a>
 
   <a href="/nike" class="w3-bar-item w3-button w3-padding-large w3-hide-small">NIKE</a>
   <a href="/jordan" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Jordan</a>
@@ -273,14 +142,15 @@ function myFunction() {
   <a  href="/admin/sneaker/editlist"  class="w3-bar-item w3-button w3-padding-large w3-hide-small " style="float: right; margin-right: 20px;" >Editor Page</a>
   
   <!-- ค้นหา -->
-  <!-- <form action="/search" method="GET">
+  <form action="/search" method="GET">
     <div class="topnav">
-      <div class="search-container">
-        <button class="icon" type="submit"><i style="color:white;" class="fa fa-search"></i></button>
-      <input name="findsneakers" type="search" placeholder="Find Name Sneaker" required>
-      
+      <div style="display: inline;" class="search-container">
+        <button style="float: right; color:white;" type="submit"><i class="fa fa-search"></i></button>
+        <input class="find123"  name="findsneakers" type="search" placeholder="Find Name Sneaker" required>
+      </div>
     </div>
-  </form> -->
+  </form>
+  
 </div>
   
 
@@ -288,13 +158,13 @@ function myFunction() {
 </div>
 
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="/admin" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Admin</a>
   <a href="/nike" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">NIKE</a>
   <a href="/jordan" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Jordan</a>
   <a href="/adidas" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Adidas</a>
   <a href="/contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact Us</a>
-  <a href="/login" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Log In</a>
-  <a href="/signup" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Sign Up</a>
-  <a href="/proflie" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Proflie</a>
+  <a href="/admin/sneaker/editlist" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Editor Page</a>
+  
 </div>
 <div class="container">
   <% if (error && error.length > 0) { %>
@@ -314,28 +184,56 @@ function myFunction() {
 <br>
 <br>
 <!-- ค้นหาcss -->
- <body> 
-  <style>
-    button {
-      width: 50px;
-      background: black;
+<style>
+  @media screen and (max-width: 720px) {
+    
+      .find123
+      {
+        float: left;
+        width: 60%; 
+        height: 60%;
+      }
+      .fasfa-search
+      {
+        float:left;
+      }
+
+    
+    
   }
-    .icon
-    {
-      float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 4px;
-    margin-right: 16px;
-    font-size: 17px;
-    }
-  
-    .topnav  input[type=search] {
+  button {
+    width: 5%;
+    background: black;
+}
+  .icon
+  {
     float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 4px;
-    margin-right: 16px;
-    font-size: 17px;
+  padding: 6px;
+  border: none;
+  margin-top: 4px;
+  margin-right: 16px;
+  font-size: 17px;
   }
-  </style>
+
+  .topnav  input[type=search] {
+  
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 4px;
+  margin-right: 10px;
+  font-size: 17px;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-right: 16px;
+  background: black;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+</style>

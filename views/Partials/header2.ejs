@@ -58,20 +58,41 @@ function myFunction() {
 
   <!-- ค้นหา -->
   
-  <!-- <form action="/search" method="GET">
+  <form action="/search" method="GET">
     <div class="topnav">
-      <div class="search-container">
-        <button class="icon" type="submit"><i style="color:white;" class="fa fa-search"></i></button>
-      <input name="findsneakers" type="search" placeholder="Find Name Sneaker" required>
-      
+      <div style="display: inline;" class="search-container">
+        <button style="float: right; color:white; " type="submit"><i class="fa fa-search"></i></button>
+        <input class="find123"  name="findsneakers" type="search" placeholder="Find Name Sneaker" required>
+      </div>
     </div>
-  </form> -->
-
+  </form>
+  
+</div>
 <%}%>
+
 <!-- ค้นหาcss -->
 <style>
+  @media screen and (max-width: 720px) {
+    
+      .find123
+      {
+        float: left;
+        width: 60%; 
+        height: 60%;
+      }
+      .fasfa-search
+      {
+        float:left;
+      }
+
+    
+    
+  }
   button {
-    width: 50px;
+    width: 40px;
+    height: 30px;
+   
+    
     background: black;
 }
   .icon
@@ -85,12 +106,20 @@ function myFunction() {
   }
 
   .topnav  input[type=search] {
+  
   float: right;
   padding: 6px;
   border: none;
   margin-top: 4px;
-  margin-right: 16px;
+  margin-right: 10px;
   font-size: 17px;
+}
+
+.topnav .search-container button {
+ margin-top: 0.5%;
+  background: black;
+  border: none;
+  cursor: pointer;
 }
 </style>
       
@@ -106,19 +135,19 @@ function myFunction() {
   <div style="float: right;" class="w3-dropdown-hover w3-hide-small">
     <a href="/logout" style="float: right;"  class="w3-bar-item w3-button w3-padding-large w3-hide-small " >Logout</a>
 
-</div>
-<a href="/profile" style="float: right;" class="w3-bar-item w3-button w3-padding-large w3-hide-small"> Profile Name Is <%= user.username %></a>
+</div><a href="/profile" style="float: right;" class="w3-bar-item w3-button w3-padding-large w3-hide-small"> Profile Name Is <%= user.username %></a>
 
 <!-- ค้นหาตอนlog in -->
-<!-- <form action="/search" method="GET">
+<form action="/search" method="GET">
   <div class="topnav">
-    <div class="search-container">
-      <button class="icon" type="submit"><i style="color:white;" class="fa fa-search"></i></button>
-    <input name="findsneakers" type="search" placeholder="Find Name Sneaker" required>
-    
+    <div style="display: inline;" class="search-container">
+      <button style="float: right; color:white;" type="submit"><i class="fa fa-search"></i></button>
+      <input class="find123"  name="findsneakers" type="search" placeholder="Find Name Sneaker" required>
+    </div>
   </div>
-</form> -->
+</form>
 
+</div>
 
 
 <%}%>

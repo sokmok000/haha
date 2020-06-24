@@ -1,6 +1,6 @@
-<%- include("Partials/adminheader") %>
-<div class="btn btn-outline-dark"><a href="/admin/sneaker/add" >Add</a></div>
-<div class="btn btn-outline-dark"><a href="/admin/user/edit" >edituser</a></div>
+<%- include("partials/adminheader") %>
+<!-- <div class="btn btn-outline-dark"><a href="/admin/sneaker/add" >Add</a></div>
+<div class="btn btn-outline-dark"><a href="/admin/user/edit" >edituser</a></div> -->
 <div class="container">
     <h2>Adidas</h2>
     <table class="table table-bordered table-dark">
@@ -22,7 +22,7 @@
             <td><%= findadidas.Namesneaker %></td>
             <td><%= findadidas.Sizesneaker %></td>
             <td><%= findadidas.Count %></td>
-            <td><a class="btn-sm btn-light" href="/admin/sneaker/<%= findadidas._id %>/detail">Edit</a></td>
+            <td><a class="btn-sm btn-light" href="/admin/sneaker/<%= findadidas._id %>/detail"><i class="fas fa-edit"></i> Edit</a></td>
           </tr>
           <% }) %>
 
@@ -57,7 +57,7 @@
             <td><%= findnike.Namesneaker %></td>
             <td><%= findnike.Sizesneaker %></td>
             <td><%= findnike.Count %></td>
-            <td><a class="btn-sm btn-light" href="/admin/sneaker/<%= findnike._id %>/detail">Edit</a></td>
+            <td><a class="btn-sm btn-light" href="/admin/sneaker/<%= findnike._id %>/detail"><i class="fas fa-edit"></i> Edit</a></td>
           </tr>
           <% }) %>
 
@@ -92,7 +92,7 @@
             <td><%= findjordan.Namesneaker %></td>
             <td><%= findjordan.Sizesneaker %></td>
             <td><%= findjordan.Count %></td>
-            <td><a class="btn-sm btn-light" href="/admin/sneaker/<%= findjordan._id %>/detail">Edit</a></td>
+            <td><a class="btn-sm btn-light" href="/admin/sneaker/<%= findjordan._id %>/detail"><i class="fas fa-edit"></i> Edit</a></td>
           </tr>
           
           <% }) %>
@@ -101,6 +101,12 @@
 
         </tbody>
       </table>
-
+      <hr>
+      <div style="background-color: black; color: white;">
+        <div style="margin:10px; font-size: 24px;">Add New Sneaker.</div>
+        <div style="margin:10px;" class="btn btn-outline-light"><i class="fas fa-plus"></i><a href="/admin/sneaker/add" > Add</a></div>
+        <div style="margin: 10px; font-size: 24px;">Edit User Here.</div>
+        <div style="margin: 10px;" class="btn btn-outline-light"><i class="fas fa-edit"></i><a href="/admin/user/edit" > Edit User</a></div>
+      </div>
 </div>
-<%- include("Partials/footer") %>
+<%- include("partials/footer") %>

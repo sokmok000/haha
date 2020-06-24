@@ -95,7 +95,7 @@
         
               <legend class="headline-5 prl6-sm prl0-lg ta-sm-l bg-transparent css-ybrhvy">
                 <div >
-                  <span style="color: white;">เลือกไซส์</span>
+                  <span style="color: white;">Choose Sizes</span>
                   <div class="form-group">
                   
                     <p><select class="form-control" type="text" value=""  name="Sizes" >
@@ -119,16 +119,17 @@
         <div class="detail" style="background-color: #F5F5F5; color: black;  " class="col"> 
         <div  class="container "  style="margin-top: 50%; margin-bottom: 50%;" >
           
-          <div style="text-align: left; font-size: 24px;">ที่อยู่</div>
+          <div  style="text-align: left; font-size: 24px;">Address</div>
                 <br>
-         
+
             <div class="row" >
-              <div class="col" >
-                
-                <input type="text" class="form-control" placeholder="First name" value="<%= user.Name %>" name="Name" required>
+  
+                <div class="col"><p>First name</p>
+                <input type="text" class="form-control" placeholder="" value="<%= user.Name %>" name="Name" required>
               </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Last name" value="<%= user.Surename %>" name="Surename" required>
+              
+                <div class="col"><p>Last name</p>
+                <input type="text" class="form-control" placeholder="" value="<%= user.Surename %>" name="Surename" required>
               </div>
             </div>
         
@@ -136,44 +137,52 @@
         
          
               <div class="row user">
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="บัตรประชาชน" value="<%= user.IDCard %>" name="IDCard" required>
+               
+                  <div class="col"><p>ID Card</p>
+                  <input type="text" class="form-control" placeholder="" value="<%= user.IDCard %>" name="IDCard" required>
                 </div>
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์" value="<%= user.Telephone %>" name="Telephone" required>
+               
+                  <div class="col"><p>Mobile Phone</p>
+                  <input type="text" class="form-control" placeholder="" value="<%= user.Telephone %>" name="Telephone" required>
                 </div>
               </div>
          
             <br>
             
             <div class="row">
-              <div class="col">
-                <input type="text" class="form-control" placeholder="บ้านเลขที่" value="<%= user.Housenumber %>" name="Housenumber" required>
+             
+                <div class="col"><p>House Number</p>
+                <input type="text" class="form-control" placeholder="" value="<%= user.Housenumber %>" name="Housenumber" required>
               </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="ถนน" value="<%= user.Road %>" name="Road" required>
+            
+                <div class="col"><p>Road</p>
+                <input type="text" class="form-control" placeholder="" value="<%= user.Road %>" name="Road" required>
               </div>
             </div>
         
           <br>
          
             <div class="row">
-              <div class="col">
-                <input type="text" class="form-control" placeholder="แขวง/ตำบล" value="<%= user.Parish %>" name="Parish" required>
+             
+                <div class="col"><p>District</p>
+                <input type="text" class="form-control" placeholder="" value="<%= user.Parish %>" name="Parish" required>
               </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="เขต/อำเภอ" value="<%= user.District %>" name="District" required>
+             
+                <div class="col"><p>City</p>
+                <input type="text" class="form-control" placeholder="" value="<%= user.District %>" name="District" required>
               </div>
             </div>
          
           <br>
          
             <div class="row">
-              <div class="col">
-                <input type="text" class="form-control" placeholder="จังหวัด" value="<%= user.Province %>" name="Province" required>
+             
+                <div class="col"><p>Province</p>
+                <input type="text" class="form-control" placeholder="" value="<%= user.Province %>" name="Province" required>
               </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="รหัสไปรษณีย์" value="<%= user.Postalcode %>" name="Postalcode" required>
+              
+                <div class="col"><p>Postalcode</p>
+                <input type="text" class="form-control" placeholder="" value="<%= user.Postalcode %>" name="Postalcode" required>
               </div>
             </div>
          
@@ -189,7 +198,7 @@
   <br> 
    
   <div class="inputBox">
-    <center><input type="submit" class="btn btn-dark" name="" value="ยืนยัน"></center>
+    <center><input type="submit" class="btn btn-dark" name="" value="Confirm"></center>
   </div>
 
   </form>

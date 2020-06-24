@@ -7,6 +7,16 @@ const plimit = require('p-limit');
 const multer = require('multer');
 const path =require("path")
 const fs = require("fs")
+// const cloudinary = require('cloudinary').v2
+// const { CloudinaryStorage } = require('multer-storage-cloudinary')
+
+// cloudinary.config({ 
+//     cloud_name: 'supersheep', 
+//     api_key: '493192273215927', 
+//     api_secret: 'lnk8n_7Bpiin_KU50_oGxRmoOBg' 
+//   });
+
+  
 
 let User = require("./model/db");
 let app = express()
@@ -26,6 +36,18 @@ const imagefilter = function(req,file,cb){
   cb(null,true)
 }
 let upload = multer({storage : storage,fileFilter : imagefilter})
+
+
+
+// var storage2 = new  CloudinaryStorage({ 
+//   cloudinary: cloudinary,
+//   params: {
+//     // format: async (req, file) => 'jpeg',
+//     public_id: (req, file) => file.originalname,
+//     path : (req, file) =>  `https://res.cloudinary.com/smilejob/image/upload/v159290293/${file.originalname}`,
+//   }
+// })
+// const parser = multer({ storage: storage2,fileFilter : imagefilter });
 
 
 router.get('/admin', function(req, res) {

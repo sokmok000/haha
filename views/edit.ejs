@@ -70,18 +70,19 @@
    
     <form  action="/profile/<%= edit._id %>/edit" method="POST" enctype="multipart/form-data" >
     <div class="profile-card">
-    
+      <center><h1>Edit Profile</h1></center>
         <div class="container image-container">
           
             <div class="main-container">
-                 
+              
                     <div class="row" >
-                      <div class="col" >
-                        
-                        <input type="text" class="form-control" placeholder="First name" value="<%= edit.Name %>" name="Name" required>
+                      
+                        <div class="col"><p>First name</p>
+                        <input type="text" class="form-control" placeholder="" value="<%= edit.Name %>" name="Name" required>
                       </div>
-                      <div class="col">
-                        <input type="text" class="form-control" placeholder="Last name" value="<%= edit.Surename %>" name="Surename" required>
+                     
+                        <div class="col"><p>Last name</p>
+                        <input type="text" class="form-control" placeholder="" value="<%= edit.Surename %>" name="Surename" required>
                       </div>
                     </div>
                   
@@ -94,44 +95,44 @@
          
           
               <div class="row user">
-                <div class="col"><p>บัตรประชาชน</p>
-                  <input type="text" class="form-control" placeholder="บัตรประชาชน" value="<%= edit.IDCard %>" name="IDCard" required>
+                <div class="col"><p>ID Card</p>
+                  <input type="text" class="form-control" placeholder="" value="<%= edit.IDCard %>" name="IDCard" required>
                 </div>
-                <div class="col"><p>เบอร์โทรศัพท์</p>
-                  <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์" value="<%= edit.Telephone %>" name="Telephone" required>
+                <div class="col"><p>Mobile Phone</p>
+                  <input type="text" class="form-control" placeholder="" value="<%= edit.Telephone %>" name="Telephone" required>
                 </div>
               </div>
             
             <br>
             
             <div class="row">
-              <div class="col"><p>บ้านเลขที่</p>
-                <input type="text" class="form-control" placeholder="บ้านเลขที่" value="<%= edit.Housenumber %>" name="Housenumber" required>
+              <div class="col"><p>House Number</p>
+                <input type="text" class="form-control" placeholder="" value="<%= edit.Housenumber %>" name="Housenumber" required>
               </div>
-              <div class="col"><p>ถนน</p>
-                <input type="text" class="form-control" placeholder="ถนน" value="<%= edit.Road %>" name="Road" required>
+              <div class="col"><p>Road</p>
+                <input type="text" class="form-control" placeholder="" value="<%= edit.Road %>" name="Road" required>
               </div>
             </div>
          
           <br>
           
             <div class="row">
-              <div class="col"><p>แขวง/ตำบล</p>
-                <input type="text" class="form-control" placeholder="แขวง/ตำบล" value="<%= edit.Parish %>" name="Parish" required>
+              <div class="col"><p>District</p>
+                <input type="text" class="form-control" placeholder="" value="<%= edit.Parish %>" name="Parish" required>
               </div>
-              <div class="col"><p>ขต/อำเภอ</p>
-                <input type="text" class="form-control" placeholder="เขต/อำเภอ" value="<%= edit.District %>" name="District" required>
+              <div class="col"><p>City</p>
+                <input type="text" class="form-control" placeholder="" value="<%= edit.District %>" name="District" required>
               </div>
             </div>
           
           <br>
           
             <div class="row">
-              <div class="col"><p>จังหวัด</p>
-                <input type="text" class="form-control" placeholder="จังหวัด" value="<%= edit.Province %>" name="Province" required>
+              <div class="col"><p>Province</p>
+                <input type="text" class="form-control" placeholder="" value="<%= edit.Province %>" name="Province" required>
               </div>
-              <div class="col"><p>รหัสไปรษณีย์</p>
-                <input type="text" class="form-control" placeholder="รหัสไปรษณีย์" value="<%= edit.Postalcode %>" name="Postalcode" required>
+              <div class="col"><p>Postalcode</p>
+                <input type="text" class="form-control" placeholder="" value="<%= edit.Postalcode %>" name="Postalcode" required>
               </div>
             </div>
           

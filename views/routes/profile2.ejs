@@ -9,7 +9,7 @@
 }
 .profile-card
 {
-    width: 30%;
+    width: 50%;
     margin: auto;
     background: black;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5);
@@ -54,14 +54,15 @@
   
 </style>
 
-<br><br>
+
 <body class="pcard">
-<div class="profile-card">
+<div style="margin-top: 5%;" class="profile-card">
     <div><a href="/profile/<%= user._id %>/edit"><div class="btn btn-outline-light" href="/profile/<%= user._id %>/edit" style="float:  right;margin-top: 10px; margin-right: 10px;">Edit</div></a>
     </div>
     <br>
+    <center><h1>Profile</h1></center>
     <div class="container image-container fluid-image">
-            <img  src= <%= "../uploadsuser/" + user.image %> style="width: 100%">
+            <center><img  src= <%= "../uploadsuser/" + user.image %> style="width: 50% "></center>
             <div class="title">
                 <h2 class="container"><span><%= user.Name %></span> <span><%= user.Surename %></span> </h2>
 
@@ -74,10 +75,10 @@
             <div class="row" >
               <div class="col" >
                 
-                <a> บัตรประชาชน: <%= user.IDCard %> </a>
+                <a>ID Card: <%= user.IDCard %> </a>
               </div>
               <div class="col">
-                <a>เบอร์โทรศัพท์: <%= user.Telephone %></a>
+                <a>Mobile Phone: <%= user.Telephone %></a>
               </div>
             </div>
           
@@ -85,10 +86,10 @@
           
               <div class="row user">
                 <div class="col">
-                    <a> บ้านเลขที่: <%= user.Housenumber %> </a>
+                    <a> House Number: <%= user.Housenumber %> </a>
                 </div>
                 <div class="col">
-                    <a> ถนน: <%= user.Road %> </a>
+                    <a> Road:  <%= user.Road %></a>
                 </div>
               </div>
             
@@ -96,10 +97,10 @@
            
             <div class="row">
               <div class="col">
-                <a> แขวง/ตำบล: <%= user.Parish %> </a>
+                <a> District:  <%= user.Parish %></a>
               </div>
               <div class="col">
-                <a> เขต/อำเภอ: <%= user.District %>  </a>
+                <a> City: <%= user.District %>  </a>
               </div>
             </div>
           
@@ -107,21 +108,19 @@
          
             <div class="row">
               <div class="col">
-                <a> จังหวัด: <%= user.Province %> </a>
+                <a> Province: <%= user.Province %> </a>
               </div>
               <div class="col">
-                <a> รหัสไปรษณีย์: <%= user.Postalcode %> </a>
+                <a> Postalcode: <%= user.Postalcode %> </a>
               </div>
             </div>
           
           <br>
           
             <div class="row">
+            
               <div class="col">
-                <a> Size (US): <%= user.Size %> </a>
-              </div>
-              <div class="col">
-                <a> เพศ: <%= user.Gender %> </a>
+                <a> Gender: <%= user.Gender %> </a>
               </div>
             </div>
           

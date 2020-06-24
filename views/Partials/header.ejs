@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+<link src="http://maxcdn.bootstrapcdn.com/font-awesome/5.0.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 <style>
    .bg {
           background-size: cover;
@@ -10,6 +13,7 @@
    div{
     overflow: hidden;
    }
+
    
   /* Make the image fully responsive */
   .carousel-inner img {
@@ -17,6 +21,7 @@
     height: 500;
   }
   /*รายการสินค้า*/
+
   .card{
     position: absolute;
     top: 50%;
@@ -39,6 +44,7 @@
     transform: rotateX(0deg);
     transition: 0.5s;
   }
+
   .card:hover .front
   {transform: rotateX(-180deg);}
   
@@ -53,8 +59,10 @@
     transform: rotateX(180deg);
     transition: 0.5s;
   }
+
   .card:hover .back
   {transform: rotateX(0deg);}
+
   .card .back .details{
     position: absolute;
     top:50%;
@@ -71,16 +79,20 @@
     padding: 0;
     font-size: 24px;
     color: #fff;
+
   }
+
   .card .back .details h2 span
   {
     
     font-size: 16px;
     color: #a7a7a7;
+
   }
   
 </style>
 <script>
+
 function myFunction() {
   var x = document.getElementById("navDemo");
   if (x.className.indexOf("w3-show") == -1) {
@@ -89,6 +101,8 @@ function myFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
+
 </script>
 
 
@@ -103,9 +117,7 @@ function myFunction() {
         <title >Sneaker</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
-        <link src="http://maxcdn.bootstrapcdn.com/font-awesome/5.0.0/css/font-awesome.min.css" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+        
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     </head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -133,21 +145,40 @@ function myFunction() {
       <div style="float: right;" class="w3-dropdown-hover w3-hide-small">
         <a href="/signup" style="float: right;" class="w3-bar-item w3-button w3-padding-large w3-hide-small " >Signup</a>
       </div>
+
   <!-- ค้นหา -->
   
-      <!-- <form action="/search" method="GET">
-        <div class="topnav">
-          <div class="search-container">
-            <button style="display:inline;" class="icon" type="submit"><i style="color:white;" class="fa fa-search"></i></button>
-          <input  name="findsneakers" type="search" placeholder="Find Name Sneaker" required>
-        
+  <form action="/search" method="GET">
+    <div class="topnav">
+      <div style="display: inline;" class="search-container">
+        <button style="float: right; color:white;" type="submit"><i class="fa fa-search"></i></button>
+        <input class="find123"  name="findsneakers" type="search" placeholder="Find Name Sneaker" required>
+      </div>
     </div>
-  </form> -->
+  </form>
+  
+</div>
 <%}%>
 <!-- ค้นหาcss -->
 <style>
+  @media screen and (max-width: 720px) {
+    
+      .find123
+      {
+        float: left;
+        width: 60%; 
+        height: 60%;
+      }
+      .fasfa-search
+      {
+        float:left;
+      }
+
+    
+    
+  }
   button {
-    width: 50px;
+    width: 5%;
     background: black;
 }
   .icon
@@ -159,6 +190,7 @@ function myFunction() {
   margin-right: 16px;
   font-size: 17px;
   }
+
   .topnav  input[type=search] {
   
   float: right;
@@ -167,6 +199,18 @@ function myFunction() {
   margin-top: 4px;
   margin-right: 10px;
   font-size: 17px;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-right: 16px;
+  background: black;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
 }
 </style>
       
@@ -180,20 +224,23 @@ function myFunction() {
   <a href="/contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact Us</a> 
   <div style="float: right;" class="w3-dropdown-hover w3-hide-small">
     <a href="/logout" style="float: right;"  class="w3-bar-item w3-button w3-padding-large w3-hide-small " >Logout</a>
-</div>
-<a href="/profile" style="float: right;" class="w3-bar-item w3-button w3-padding-large w3-hide-small"> Profile Name Is <%= user.username %></a>
+
+</div><a href="/profile" style="float: right;" class="w3-bar-item w3-button w3-padding-large w3-hide-small"> Profile Name Is <%= user.username %></a>
+
 <!-- ค้นหาตอนlog in -->
-<!-- <form action="/search" method="GET">
+<form action="/search" method="GET">
   <div class="topnav">
-    <div class="search-container">
-      <button class="icon" type="submit"><i style="color:white;" class="fa fa-search"></i></button>
-    <input name="findsneakers" type="search" placeholder="Find Name Sneaker" required>
-    
+    <div style="display: inline;" class="search-container">
+      <button style="float: right; color:white;" type="submit"><i class="fa fa-search"></i></button>
+      <input class="find123"  name="findsneakers" type="search" placeholder="Find Name Sneaker" required>
+    </div>
   </div>
-</form> -->
+</form>
+
+
+
 <%}%>
 </div>
-
 
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px; ">
 
@@ -222,3 +269,4 @@ function myFunction() {
 
 
  <body> 
+   
