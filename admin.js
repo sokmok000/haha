@@ -7,19 +7,32 @@ const plimit = require('p-limit');
 const multer = require('multer');
 const path =require("path")
 const fs = require("fs")
-// const cloudinary = require('cloudinary').v2
-// const { CloudinaryStorage } = require('multer-storage-cloudinary')
-
-// cloudinary.config({ 
-//     cloud_name: 'supersheep', 
-//     api_key: '493192273215927', 
-//     api_secret: 'lnk8n_7Bpiin_KU50_oGxRmoOBg' 
-//   });
+const cloudinary = require('cloudinary').v2
+const { CloudinaryStorage } = require('multer-storage-cloudinary');
 
   
 
 let User = require("./model/db");
 let app = express()
+
+
+
+
+ cloudinary.config({ 
+  cloud_name: 'supersheep', 
+  api_key: '493192273215927', 
+  api_secret: 'lnk8n_7Bpiin_KU50_oGxRmoOBg' 
+});
+
+var storage2 = new  CloudinaryStorage({ 
+    cloudinary: cloudinary,
+    params: {
+      format: async (req, file) => 'png',
+      public_id: (req, file) => file.originalname,
+      path : (req, file) =>  `https://res.cloudinary.com/smilejob/image/upload/v159290293/${file.originalname}`,
+    }
+  })
+  const upload2 = multer({ storage: storage2 });
 
 let storage = multer.diskStorage({
   destination: "./public/uploadssneaker",
@@ -39,15 +52,6 @@ let upload = multer({storage : storage,fileFilter : imagefilter})
 
 
 
-// var storage2 = new  CloudinaryStorage({ 
-//   cloudinary: cloudinary,
-//   params: {
-//     // format: async (req, file) => 'jpeg',
-//     public_id: (req, file) => file.originalname,
-//     path : (req, file) =>  `https://res.cloudinary.com/smilejob/image/upload/v159290293/${file.originalname}`,
-//   }
-// })
-// const parser = multer({ storage: storage2,fileFilter : imagefilter });
 
 
 router.get('/admin', function(req, res) {
@@ -61,17 +65,6 @@ router.get('/admin', function(req, res) {
   }).sort({$natural:-1}).limit(3)
 });
 
-
-// router.get('/admin/sneaker/editlist', function(req, res) {
-//  sneaker.find(function(err,findall){
-//    if(err){
-//      console.log("error")
-//    }else{
-//     res.render('editlist',{findall:findall});
-//    }
-//  }
-//  )
-// })
 
 
 router.get('/admin/sneaker/editlist', function(req, res) {
@@ -169,6 +162,7 @@ router.get('/admin/sneaker/:id/edit', function(req,res){
 
 router.post('/admin/sneaker/:id/edit',upload.array('Image',20),function(req,res){ 
   if(req.files){
+    console.log(req.files)
     sneaker.findById({_id:req.params.id},function(err,find){
      
       })
@@ -286,7 +280,18 @@ router.get("/jordan",function(req,res){
 });
 
 
-
+router.get('/searchAdmin', function(req,res){
+  sneaker.findOne({Namesneaker: {$regex: req.query.findsneakers }},function(err,sneakershow){
+        if(sneakershow == null){
+          req.flash('error','CAN NOT FIND SNEAKER');
+         res.redirect("/admin")
+        }
+       else {
+         console.log(sneakershow)
+      res.redirect("/admin" + "/sneaker" + "/" + sneakershow._id  + "/detail")
+      }
+  })
+});
 
 
 

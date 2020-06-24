@@ -90,9 +90,6 @@
 
   }
   
- 
-
-
 </style>
 <script>
 
@@ -105,7 +102,9 @@ function myFunction() {
   }
 }
 
+
 </script>
+
 
 
 
@@ -115,7 +114,7 @@ function myFunction() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Admin Sneaker</title>
+        <title >Sneaker</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -127,62 +126,29 @@ function myFunction() {
 
 
 
-<div class="w3-top content" >
+<div style="display:inline;" class="w3-top content" >
     <div class="w3-bar w3-black w3-card">
       
       <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     
+      <a href="/" class="w3-bar-item w3-button w3-padding-large"><i class="glyphicon glyphicon-home"></i> Sneaker</a>
+      
 
-      <a href="/admin" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><i class="glyphicon glyphicon-home"></i> Admin </a>
-
-  <a href="/nike" class="w3-bar-item w3-button w3-padding-large w3-hide-small">NIKE</a>
-  <a href="/jordan" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Jordan</a>
-  <a href="/adidas" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Adidas</a>
-  <a href="/contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact Us</a> 
-  <a  href="/admin/sneaker/editlist"  class="w3-bar-item w3-button w3-padding-large w3-hide-small " style="float: right; margin-right: 20px;" >Editor Page</a>
-  
-  <!-- ค้นหา -->
-  <form action="/searchAdmin" method="GET">
-    <div class="topnav">
-      <div style="display: inline;" class="search-container">
-        <button style="float: right; color:white;" type="submit"><i class="fa fa-search"></i></button>
-        <input class="find123"  name="findsneakers" type="search" placeholder="Find Name Sneaker" required>
+      <%if(!locals.user){%>
+      <a href="/nike" class="w3-bar-item w3-button w3-padding-large w3-hide-small">NIKE</a>
+      <a href="/jordan" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Jordan</a>
+      <a href="/adidas" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Adidas</a>
+      <a href="/contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact Us</a>       
+      <div style="float: right;" class="w3-dropdown-hover w3-hide-small">
+       <a  href="/login" style="float: right;" class="w3-bar-item w3-button w3-padding-large w3-hide-small "  >Login</a>
       </div>
-    </div>
-  </form>
-  
-</div>
-  
+      <div style="float: right;" class="w3-dropdown-hover w3-hide-small">
+        <a href="/signup" style="float: right;" class="w3-bar-item w3-button w3-padding-large w3-hide-small " >Signup</a>
+      </div>
 
 
 
-
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="/admin" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Admin</a>
-  <a href="/nike" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">NIKE</a>
-  <a href="/jordan" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Jordan</a>
-  <a href="/adidas" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Adidas</a>
-  <a href="/contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact Us</a>
-  <a href="/admin/sneaker/editlist" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Editor Page</a>
-  
-</div>
-<div class="container">
-  <% if (error && error.length > 0) { %>
-    <div class="alert alert-danger" role="alert">
-      <%= error %>
-    </div>
-  <% } %>
-  <% if (success && success.length > 0) { %>
-    <div class="alert alert-success" role="alert">
-      <%= success %>
-    </div>
-  <% } %>
-</div>  
-</div>
-
-
-<br>
-<br>
+<%}%>
 <!-- ค้นหาcss -->
 <style>
   @media screen and (max-width: 720px) {
@@ -237,3 +203,51 @@ function myFunction() {
   cursor: pointer;
 }
 </style>
+      
+
+
+<%if(locals.user){%>
+ 
+  <a href="/nike" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Nike</a>
+  <a href="/jordan" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Jordan</a>
+  <a href="/adidas" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Adidas</a>
+  <a href="/contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact Us</a> 
+  <div style="float: right;" class="w3-dropdown-hover w3-hide-small">
+    <a href="/logout" style="float: right;"  class="w3-bar-item w3-button w3-padding-large w3-hide-small " >Logout</a>
+
+</div><a href="/profile" style="float: right;" class="w3-bar-item w3-button w3-padding-large w3-hide-small"> Profile </a>
+
+
+
+
+<%}%>
+</div>
+
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px; ">
+
+  <a href="/nike" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Nike</a>
+  <a href="/jordan" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Jordan</a>
+  <a href="/adidas" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Adidas</a>
+  <a href="/contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact Us</a>
+  <a href="/login" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Log In</a>
+  <a href="/signup" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Sign Up</a>
+  <a href="/proflie" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Proflie</a>
+</div>
+<div class="container">
+  <% if (error && error.length > 0) { %>
+    <div class="alert alert-danger" role="alert">
+      <%= error %>
+    </div>
+  <% } %>
+  <% if (success && success.length > 0) { %>
+    <div class="alert alert-success" role="alert">
+      <%= success %>
+    </div>
+  <% } %>
+</div>  
+</div>
+
+
+
+ <body> 
+   

@@ -1,4 +1,4 @@
-<%- include("Partials/header") %>
+<%- include("Partials/header4") %>
 <style>
 *{
     color: white;
@@ -136,7 +136,7 @@
                 
             <div class="itemlist">
                 
-                 <%=  sneakers.Namesneaker %>  <%=  sneakers.Sizesneaker %> <%= moment(sneakers.Date).format("MM/DD/YY") %>
+              <%=  sneakers.Image[0].filename %> <%=  sneakers.Namesneaker %>  <%=  sneakers.Sizesneaker %> <%= moment(sneakers.Date).format("MM/DD/YY") %>
                   
             </div>
         

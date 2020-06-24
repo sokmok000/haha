@@ -57,7 +57,7 @@ function myFunction() {
   </div>
 
   <!-- ค้นหา -->
-  
+<!--   
   <form action="/search" method="GET">
     <div class="topnav">
       <div style="display: inline;" class="search-container">
@@ -65,9 +65,9 @@ function myFunction() {
         <input class="find123"  name="findsneakers" type="search" placeholder="Find Name Sneaker" required>
       </div>
     </div>
-  </form>
+  </form> -->
   
-</div>
+
 <%}%>
 
 <!-- ค้นหาcss -->
@@ -127,7 +127,7 @@ function myFunction() {
 
 <%if(locals.user){%>
  
-  <a href="/nike" class="w3-bar-item w3-button w3-padding-large w3-hide-small">NIKE</a>
+  <a href="/nike" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Nike</a>
   <a href="/jordan" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Jordan</a>
   <a href="/adidas" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Adidas</a>
   <a href="/contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact Us</a> 
@@ -135,9 +135,9 @@ function myFunction() {
   <div style="float: right;" class="w3-dropdown-hover w3-hide-small">
     <a href="/logout" style="float: right;"  class="w3-bar-item w3-button w3-padding-large w3-hide-small " >Logout</a>
 
-</div><a href="/profile" style="float: right;" class="w3-bar-item w3-button w3-padding-large w3-hide-small"> Profile Name Is <%= user.username %></a>
+</div><a href="/profile" style="float: right;" class="w3-bar-item w3-button w3-padding-large w3-hide-small"> Profile </a>
 
-<!-- ค้นหาตอนlog in -->
+<!-- ค้นหาตอนlog in
 <form action="/search" method="GET">
   <div class="topnav">
     <div style="display: inline;" class="search-container">
@@ -145,16 +145,16 @@ function myFunction() {
       <input class="find123"  name="findsneakers" type="search" placeholder="Find Name Sneaker" required>
     </div>
   </div>
-</form>
+</form> -->
 
-</div>
+
 
 
 <%}%>
 </div>
 
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="/nike" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">NIKE</a>
+  <a href="/nike" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Nike</a>
   <a href="/jordan" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Jordan</a>
   <a href="/adidas" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Adidas</a>
   <a href="/contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact Us</a>

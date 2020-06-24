@@ -407,7 +407,6 @@ router.get('/search', function(req,res){
          res.redirect("/")
         }
        else {
-         console.log(sneakershow)
       res.redirect("/" + sneakershow.Brand + "/" + sneakershow._id  + "/detail")
       }
   })

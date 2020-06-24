@@ -587,7 +587,7 @@
                  
                     <div class="product">
                         <div class="img-container">
-                            <img id="imageBox"   src=<%= "/uploadssneaker/" + nikedetail.Image[0].filename %>>
+                            <img id="imageBox"  src=<%= "/uploadssneaker/" + nikedetail.Image[0].filename %>>
                         </div>
                     </div>
                     
@@ -610,20 +610,34 @@
                         <hr>
                         
                         <!-- The grid: four columns -->
-                                <div class="row">
+                        <div class="row">
+                            <div class="product-small-img" >
+                            <img src=<%= "/uploadssneaker/" + nikedetail.Image[0].filename %>  onclick="myFunction(this);">
+                            </div>
+                            <div class="product-small-img" >
+                            <img src=<%= "/uploadssneaker/" + nikedetail.Image[1].filename %>  onclick="myFunction(this);">
+                            </div>
+                            <div class="product-small-img" >
+                            <img src=<%= "/uploadssneaker/" + nikedetail.Image[2].filename %>  onclick="myFunction(this);">
+                            </div>
+                            <div class="product-small-img" >
+                            <img src=<%= "/uploadssneaker/" + nikedetail.Image[3].filename %> onclick="myFunction(this);">
+                            </div>
+                        </div>
+                                <!-- <div class="row">
                                     <div class="product-small-img" >
-                                    <img src=<%= "/uploadssneaker/" + nikedetail.Image[0].filename %>  onclick="myFunction(this);">
+                                    <img src="https://res.cloudinary.com/supersheep/image/upload/v1592998367/<%= nikedetail.Image[0].filename %>.png"  onclick="myFunction(this);">
                                     </div>
                                     <div class="product-small-img" >
-                                    <img src=<%= "/uploadssneaker/" + nikedetail.Image[1].filename %>  onclick="myFunction(this);">
+                                    <img src="https://res.cloudinary.com/supersheep/image/upload/v1592998367/<%= nikedetail.Image[1].filename %>.png"  onclick="myFunction(this);">
                                     </div>
                                     <div class="product-small-img" >
-                                    <img src=<%= "/uploadssneaker/" + nikedetail.Image[2].filename %>  onclick="myFunction(this);">
+                                    <img src="https://res.cloudinary.com/supersheep/image/upload/v1592998367/<%= nikedetail.Image[2].filename %>.png"  onclick="myFunction(this);">
                                     </div>
                                     <div class="product-small-img" >
-                                    <img src=<%= "/uploadssneaker/" + nikedetail.Image[3].filename %> onclick="myFunction(this);">
+                                    <img src="https://res.cloudinary.com/supersheep/image/upload/v1592998367/<%= nikedetail.Image[3].filename %>.png" onclick="myFunction(this);">
                                     </div>
-                                </div>
+                                </div> -->
                                 <br><br><br>
                                 
                                 
@@ -638,7 +652,7 @@
                         <a href="/<%= nikedetail._id %>/<%= nikedetail.Namesneaker %>/buy" class="buy"><i class="fas fa-shopping-cart"></i>Buy Now </a>
                       
                         <div  class="price">
-                            <i style="margin-right:5%" class="fas fa-dollar-sign"></i>
+                            <i style="margin:50%" class="fas fa-dollar-sign"></i>
                             <h1><%= nikedetail.Price %></h1>
                         </div>
                     </div>
