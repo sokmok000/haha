@@ -38,7 +38,7 @@ app.use((req,res,next)=>{
 let storage = multer.diskStorage({
   destination: "./public/uploadsuser",
   filename:function(req,file,cb){
-    cb(null,file.fieldname + "+" + Date.now() + path.extname(file.originalname));
+    cb(null,file.fieldname + "+" + Date.now() + "+" + path.extname(file.originalname));
   }
 })
 const imagefilter = function(req,file,cb){

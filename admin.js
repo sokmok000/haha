@@ -37,7 +37,7 @@ var storage2 = new  CloudinaryStorage({
 let storage = multer.diskStorage({
   destination: "./public/uploadssneaker",
   filename:function(req,file,cb){
-    cb(null,file.fieldname + "+" + Date.now() + path.extname(file.originalname));
+    cb(null,file.fieldname + "+" + Date.now() + "+" + path.extname(file.originalname));
   }
 })
 const imagefilter = function(req,file,cb){
